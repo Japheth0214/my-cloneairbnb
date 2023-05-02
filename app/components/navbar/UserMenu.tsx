@@ -87,7 +87,7 @@ const UserMenu = () => {
                </div>
           </div>
           )}
-      </div>
+      </div> 
      );
 }
  
