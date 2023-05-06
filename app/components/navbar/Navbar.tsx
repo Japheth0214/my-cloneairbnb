@@ -1,7 +1,10 @@
+'use client';
+
 import Container  from "../Container";
 import Logo from "./Logo"
 import Search from "./Search";
 import UserMenu  from "./UserMenu";
+
 import { SafeUser } from "@/app/types";
 
 interface NavbarProps {
