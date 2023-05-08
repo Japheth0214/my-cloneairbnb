@@ -10,17 +10,17 @@ import { signIn } from 'next-auth/react';
    SubmitHandler,
    useForm
  } from 'react-hook-form';
-import useRegisterModal from '@/app/hooks/useRegisterModal';
+
 import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
 import { toast } from 'react-hot-toast'
 import Button from '../Button';
-
+import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
 import { useRouter } from 'next/navigation';
 
-const RegisterModal= () => {
+const LoginModal = () => {
    const router = useRouter();
    const registerModal = useRegisterModal();
    const loginModal = useLoginModal();
@@ -51,7 +51,7 @@ const RegisterModal= () => {
 
       if (callback?.ok) {
          toast.success('Logged in');
-         router.refresh
+         router.refresh();
          loginModal.onClose();
       }
 
@@ -148,4 +148,4 @@ const RegisterModal= () => {
     );
 }
  
-export default RegisterModal;
+export default LoginModal;
