@@ -47,6 +47,8 @@ export const authOptions: AuthOptions = {
             user.hashedPassword
 
          );
+
+
          if (!isCorrectPassword) {
             throw new Error('Invalid Credentials');
          }
@@ -59,12 +61,12 @@ export const authOptions: AuthOptions = {
    pages: {
       signIn: '/',
    },
-   debug:process.env.NODE_ENV === 'development',
+   debug: process.env.NODE_ENV === 'development',
    session: {
       strategy: "jwt"
 
    },
    secret: process.env.NEXTAUTH_SECRET,
-}
+};
 
-export default NextAuth(authOptions)
+export default NextAuth(authOptions);
