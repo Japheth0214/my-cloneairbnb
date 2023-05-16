@@ -107,7 +107,7 @@ if (!currentUser) {
             />
             <MenuItem
                   onClick={() => {}}
-                  label="My reserations"
+                  label="My reservations"
             />
             <MenuItem
                   onClick={() => {}}
