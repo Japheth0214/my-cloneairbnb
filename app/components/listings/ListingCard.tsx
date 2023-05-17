@@ -3,7 +3,7 @@
 
 import { Listing, Reservation } from "@prisma/client";
 
-import { SafeListings, SafeUser,  } from "@/app/types";
+import { SafeListing, SafeUser,  } from "@/app/types";
 import { useRouter } from "next/navigation";
 import useCountries from "@/app/hooks/useCountries";
 import { useCallback, useMemo } from "react";
@@ -13,7 +13,7 @@ import HeartButton from "../HeartButton";
 import Button from "../Button";
 
 interface ListingCardProps {
-   data: SafeListings;
+   data: SafeListing;
    reservation?: Reservation
    onAction?: (id: string) => void;
    disabled?: boolean;
@@ -72,7 +72,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
    return (
 
       <div 
-      onClick={() => router.push(`/Listings/${data.id}`)}
+      onClick={() => router.push(`/listings/${data.id}`)}
       className="
          col-span-1 curson-pointer group
       "
